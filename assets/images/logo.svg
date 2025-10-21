@@ -1,0 +1,10 @@
+<svg width="250" height="100" viewBox="0 0 250 100" xmlns="http://www.w3.org/2000/svg">
+    <ellipse cx="125" cy="50" rx="100" ry="30" fill="none" stroke="#1a1a2e" stroke-width="2"/>
+    <path d="M130 20 L110 55 L125 55 L115 80 L145 45 L130 45 Z" fill="#FF6B35"/>
+    <text x="50%" y="55%" dominant-baseline="middle" text-anchor="middle" font-family="Poppins, sans-serif" font-size="28" font-weight="800" fill="#1a1a2e" stroke="white" stroke-width="0.5">
+        HOY MISMO
+    </text>
+    <path d="M105 25 L107 29 L111 29 L108 31 L109 35 L106 33 L103 35 L104 31 L101 29 L105 29 Z" fill="#FFC107"/>
+    <path d="M145 25 L147 29 L151 29 L148 31 L149 35 L146 33 L143 35 L144 31 L141 29 L145 29 Z" fill="#FFC107"/>
+    <path d="M160 65 L163 70 L168 70 L164 73 L166 78 L162 75 L158 78 L160 73 L156 70 L160 70 Z" fill="#FFC107" transform="scale(1.2)"/>
+</svg>

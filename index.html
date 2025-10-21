@@ -1,0 +1,374 @@
+<!DOCTYPE html>
+<html lang="es" class="scroll-smooth">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Hoy Mismo Auto Transport - Transporte de Vehículos Confiable</title>
+    <meta name="description" content="Servicio de transporte de vehículos rápido, seguro y confiable en todo el país. Obtén tu cotización instantánea en línea. Abierto y cerrado. Rastreo GPS 24/7.">
+    
+    <!-- Tailwind CSS -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    
+    <!-- Font Awesome -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Poppins:wght@600;700;800&display=swap" rel="stylesheet">
+    
+    <!-- Custom CSS -->
+    <link rel="stylesheet" href="assets/css/style.css">
+
+    <script>
+        // Custom Tailwind Colors
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        'hm-orange': '#FF6B35',
+                        'hm-blue': '#004E89',
+                        'hm-dark': '#1a1a2e',
+                    }
+                }
+            }
+        }
+    </script>
+</head>
+<body class="bg-gray-50 text-gray-800">
+
+    <!-- Header -->
+    <header id="header" class="bg-white/80 backdrop-blur-md sticky top-0 z-50 transition-all duration-300">
+        <div class="container mx-auto max-w-7xl px-4">
+            <div class="flex justify-between items-center py-2">
+                <a href="#" class="flex items-center">
+                    <img src="assets/images/logo.svg" alt="Hoy Mismo Logo" class="h-16 w-auto">
+                </a>
+                <nav class="hidden md:flex items-center space-x-6">
+                    <a href="#services" class="text-gray-600 hover:text-hm-orange transition-colors">Servicios</a>
+                    <a href="#how-it-works" class="text-gray-600 hover:text-hm-orange transition-colors">Cómo Funciona</a>
+                    <a href="#faq" class="text-gray-600 hover:text-hm-orange transition-colors">Preguntas</a>
+                    <a href="tel:+15206771945" class="text-gray-600 hover:text-hm-orange transition-colors flex items-center gap-2"><i class="fas fa-phone"></i> Soporte 24/7</a>
+                </nav>
+                <a href="#quote-form" class="hidden md:inline-block bg-hm-orange text-white font-bold py-2 px-5 rounded-lg shadow-md hover:bg-orange-600 transition-all transform hover:scale-105">
+                    Cotizar Ahora
+                </a>
+                <button id="mobile-menu-btn" class="md:hidden text-2xl text-gray-700">
+                    <i class="fas fa-bars"></i>
+                </button>
+            </div>
+        </div>
+        <!-- Mobile Menu -->
+        <div id="mobile-menu" class="hidden md:hidden bg-white border-t border-gray-200">
+            <a href="#services" class="block py-3 px-4 text-gray-600 hover:bg-gray-100">Servicios</a>
+            <a href="#how-it-works" class="block py-3 px-4 text-gray-600 hover:bg-gray-100">Cómo Funciona</a>
+            <a href="#faq" class="block py-3 px-4 text-gray-600 hover:bg-gray-100">Preguntas Frecuentes</a>
+            <a href="tel:+15206771945" class="block py-3 px-4 text-gray-600 hover:bg-gray-100">Llamar a Soporte</a>
+            <div class="p-4">
+                 <a href="#quote-form" class="w-full text-center block bg-hm-orange text-white font-bold py-3 px-5 rounded-lg shadow-md hover:bg-orange-600 transition-all">
+                    Cotizar Ahora
+                </a>
+            </div>
+        </div>
+    </header>
+
+    <!-- Hero Section -->
+    <main>
+        <section class="hero-bg text-white">
+            <div class="container mx-auto max-w-7xl px-4 py-20 md:py-32">
+                <div class="grid md:grid-cols-2 gap-12 items-center">
+                    <div class="text-center md:text-left">
+                        <h1 class="font-poppins text-4xl md:text-6xl font-extrabold leading-tight">Transporte de Vehículos, Rápido y Seguro.</h1>
+                        <p class="mt-6 text-lg md:text-xl opacity-90">Obtén una cotización instantánea y sin compromiso para transportar tu auto a cualquier parte del país. Confianza y tranquilidad en cada milla.</p>
+                        <div class="mt-8 flex justify-center md:justify-start gap-4">
+                            <div class="flex items-center gap-2"><i class="fas fa-shield-alt text-green-400"></i><span>100% Asegurados</span></div>
+                            <div class="flex items-center gap-2"><i class="fas fa-map-marked-alt text-green-400"></i><span>Cobertura Nacional</span></div>
+                            <div class="flex items-center gap-2"><i class="fas fa-headset text-green-400"></i><span>Soporte 24/7</span></div>
+                        </div>
+                    </div>
+                    
+                    <!-- Quote Form -->
+                    <div id="quote-form" class="bg-white/90 backdrop-blur-sm p-8 rounded-2xl shadow-2xl">
+                        <h2 class="text-2xl font-bold text-gray-900 text-center font-poppins">Calcula tu Tarifa al Instante</h2>
+                        <form id="instant-quote-form" class="mt-6 space-y-4">
+                            <div>
+                                <label for="pickup" class="block text-sm font-medium text-gray-700">Origen</label>
+                                <div class="relative mt-1">
+                                    <i class="fas fa-map-marker-alt absolute left-3 top-3.5 text-gray-400"></i>
+                                    <input type="text" id="pickup" placeholder="Ciudad o Código Postal" class="w-full pl-10 pr-4 py-2.5 border border-gray-300 rounded-lg text-gray-900 focus:ring-2 focus:ring-hm-orange focus:border-hm-orange" required>
+                                </div>
+                            </div>
+                             <div>
+                                <label for="dropoff" class="block text-sm font-medium text-gray-700">Destino</label>
+                                <div class="relative mt-1">
+                                    <i class="fas fa-flag-checkered absolute left-3 top-3.5 text-gray-400"></i>
+                                    <input type="text" id="dropoff" placeholder="Ciudad o Código Postal" class="w-full pl-10 pr-4 py-2.5 border border-gray-300 rounded-lg text-gray-900 focus:ring-2 focus:ring-hm-orange focus:border-hm-orange" required>
+                                </div>
+                            </div>
+                             <div>
+                                <label for="vehicle" class="block text-sm font-medium text-gray-700">Tipo de Vehículo</label>
+                                <div class="relative mt-1">
+                                    <i class="fas fa-car absolute left-3 top-3.5 text-gray-400"></i>
+                                    <select id="vehicle" class="w-full pl-10 pr-4 py-2.5 border border-gray-300 rounded-lg text-gray-900 appearance-none focus:ring-2 focus:ring-hm-orange focus:border-hm-orange">
+                                        <option>Sedán</option>
+                                        <option>SUV</option>
+                                        <option>Pickup Truck</option>
+                                        <option>Motocicleta</option>
+                                        <option>Clásico / Exótico</option>
+                                    </select>
+                                    <i class="fas fa-chevron-down absolute right-4 top-3.5 text-gray-400"></i>
+                                </div>
+                            </div>
+                            <button type="submit" class="w-full bg-hm-orange text-white font-bold py-3 px-5 rounded-lg shadow-lg hover:bg-orange-600 transition-all transform hover:scale-105 text-lg">
+                                <i class="fas fa-calculator"></i> Ver mi Cotización
+                            </button>
+                        </form>
+                        <div id="quote-result" class="mt-4 text-center text-gray-800 font-bold"></div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- How it Works Section -->
+        <section id="how-it-works" class="py-20 bg-white">
+            <div class="container mx-auto max-w-7xl px-4 text-center">
+                <h2 class="text-3xl md:text-4xl font-bold font-poppins">Tu Vehículo Transportado en 4 Simples Pasos</h2>
+                <p class="mt-4 max-w-2xl mx-auto text-gray-600">Hemos simplificado el proceso para que tu experiencia sea lo más sencilla y transparente posible.</p>
+                <div class="mt-12 grid md:grid-cols-4 gap-x-8 gap-y-16">
+                    <!-- Step 1 -->
+                    <div class="relative step-card" data-step="1">
+                        <div class="bg-gray-50 p-6 rounded-lg shadow-md">
+                            <div class="text-4xl text-hm-orange"><i class="fas fa-file-invoice-dollar"></i></div>
+                            <h3 class="mt-4 text-lg font-bold">Cotiza y Reserva</h3>
+                            <p class="mt-2 text-sm text-gray-600">Usa nuestra calculadora para obtener un precio al instante. Sin costos ocultos.</p>
+                        </div>
+                    </div>
+                    <!-- Step 2 -->
+                    <div class="relative step-card" data-step="2">
+                         <div class="bg-gray-50 p-6 rounded-lg shadow-md">
+                            <div class="text-4xl text-hm-orange"><i class="fas fa-hand-holding-usd"></i></div>
+                            <h3 class="mt-4 text-lg font-bold">Agendamos Recogida</h3>
+                            <p class="mt-2 text-sm text-gray-600">Coordinamos contigo el día y la hora. Inspeccionamos tu vehículo y lo cargamos de forma segura.</p>
+                        </div>
+                    </div>
+                    <!-- Step 3 -->
+                    <div class="relative step-card" data-step="3">
+                         <div class="bg-gray-50 p-6 rounded-lg shadow-md">
+                            <div class="text-4xl text-hm-orange"><i class="fas fa-satellite-dish"></i></div>
+                            <h3 class="mt-4 text-lg font-bold">Rastrea en Vivo</h3>
+                            <p class="mt-2 text-sm text-gray-600">Sigue tu auto en tiempo real con nuestro sistema de rastreo GPS 24/7 desde tu celular.</p>
+                        </div>
+                    </div>
+                    <!-- Step 4 -->
+                    <div class="relative step-card" data-step="4">
+                         <div class="bg-gray-50 p-6 rounded-lg shadow-md">
+                            <div class="text-4xl text-hm-orange"><i class="fas fa-car-side"></i></div>
+                            <h3 class="mt-4 text-lg font-bold">Recibe tu Vehículo</h3>
+                            <p class="mt-2 text-sm text-gray-600">Entregamos tu auto en la puerta de tu casa. Hacemos una inspección final y ¡listo!</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Services Section -->
+        <section id="services" class="py-20 bg-gray-50">
+            <div class="container mx-auto max-w-7xl px-4">
+                <div class="text-center">
+                    <h2 class="text-3xl md:text-4xl font-bold font-poppins">Servicios Adaptados a tus Necesidades</h2>
+                    <p class="mt-4 max-w-2xl mx-auto text-gray-600">Ya sea un auto familiar o una joya de colección, tenemos la solución perfecta para ti.</p>
+                </div>
+                <div class="mt-12 grid md:grid-cols-2 gap-8">
+                    <!-- Service Open Transport -->
+                    <div class="bg-white p-8 rounded-lg shadow-lg flex items-start gap-6 hover:shadow-xl transition-shadow">
+                        <div class="text-5xl text-hm-orange"><i class="fas fa-truck-loading"></i></div>
+                        <div>
+                            <h3 class="text-xl font-bold">Transporte Abierto</h3>
+                            <p class="mt-2 text-gray-600">La opción más popular y económica. Tu vehículo viaja de forma segura en un remolque abierto, igual que los autos nuevos de agencia.</p>
+                        </div>
+                    </div>
+                     <!-- Service Enclosed Transport -->
+                    <div class="bg-white p-8 rounded-lg shadow-lg flex items-start gap-6 hover:shadow-xl transition-shadow">
+                         <div class="text-5xl text-hm-blue"><i class="fas fa-box"></i></div>
+                        <div>
+                            <h3 class="text-xl font-bold">Transporte Cerrado</h3>
+                            <p class="mt-2 text-gray-600">Máxima protección contra el clima y escombros del camino. Ideal para vehículos clásicos, de lujo o exóticos.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Why Choose Us Section -->
+        <section class="py-20 bg-white">
+            <div class="container mx-auto max-w-7xl px-4">
+                <div class="grid lg:grid-cols-2 gap-12 items-center">
+                    <div>
+                        <h2 class="text-3xl md:text-4xl font-bold font-poppins">¿Por Qué Confiar en Hoy Mismo?</h2>
+                        <p class="mt-4 text-gray-600">No solo movemos autos, movemos tu tranquilidad. Estamos comprometidos con ofrecer un servicio excepcional de principio a fin.</p>
+                        <div class="mt-8 space-y-6">
+                            <div class="flex items-start gap-4">
+                                <div class="flex-shrink-0 w-12 h-12 bg-orange-100 text-hm-orange rounded-full flex items-center justify-center text-xl"><i class="fas fa-shield-alt"></i></div>
+                                <div>
+                                    <h4 class="font-bold">Seguro de $1,000,000</h4>
+                                    <p class="text-gray-600">Tu vehículo está cubierto de punta a punta. Cero deducible para ti.</p>
+                                </div>
+                            </div>
+                            <div class="flex items-start gap-4">
+                                <div class="flex-shrink-0 w-12 h-12 bg-orange-100 text-hm-orange rounded-full flex items-center justify-center text-xl"><i class="fas fa-user-tie"></i></div>
+                                <div>
+                                    <h4 class="font-bold">Conductores Verificados</h4>
+                                    <p class="text-gray-600">Solo trabajamos con transportistas profesionales y con años de experiencia comprobada.</p>
+                                </div>
+                            </div>
+                            <div class="flex items-start gap-4">
+                                <div class="flex-shrink-0 w-12 h-12 bg-orange-100 text-hm-orange rounded-full flex items-center justify-center text-xl"><i class="fas fa-map-location-dot"></i></div>
+                                <div>
+                                    <h4 class="font-bold">Rastreo GPS en Tiempo Real</h4>
+                                    <p class="text-gray-600">Nunca te preguntarás dónde está tu auto. Monitorea su ubicación 24/7 desde nuestro portal.</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="hidden lg:block">
+                        <img src="https://placehold.co/600x400/e2e8f0/334155?text=Auto+Seguro" alt="Vehículo siendo cargado de forma segura" class="rounded-xl shadow-2xl object-cover">
+                    </div>
+                </div>
+            </div>
+        </section>
+        
+        <!-- Recent Shipments Section -->
+        <section id="recent-shipments" class="py-12 bg-hm-dark text-white">
+            <div class="container mx-auto max-w-7xl px-4 text-center">
+                <div id="shipment-ticker" class="text-lg opacity-0 transition-opacity duration-500">
+                    <!-- Ticker content will be injected by JavaScript -->
+                </div>
+            </div>
+        </section>
+
+        <!-- Testimonials -->
+        <section class="py-20 bg-gray-50">
+             <div class="container mx-auto max-w-7xl px-4 text-center">
+                <h2 class="text-3xl md:text-4xl font-bold font-poppins">Lo que Dicen Nuestros Clientes</h2>
+                <div class="mt-12 grid md:grid-cols-3 gap-8 text-left">
+                    <!-- Testimonial 1 -->
+                    <div class="bg-white p-6 rounded-lg shadow-md">
+                        <div class="flex items-center">
+                            <div class="text-yellow-400"><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i></div>
+                        </div>
+                        <p class="mt-4 text-gray-600">¡Servicio impecable! Mi auto llegó de California a Texas antes de lo esperado y en perfectas condiciones. El rastreo GPS es una maravilla.</p>
+                        <div class="mt-4 font-bold">- Laura G.</div>
+                    </div>
+                     <!-- Testimonial 2 -->
+                    <div class="bg-white p-6 rounded-lg shadow-md">
+                         <div class="flex items-center">
+                            <div class="text-yellow-400"><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i></div>
+                        </div>
+                        <p class="mt-4 text-gray-600">Era la primera vez que transportaba un vehículo y estaba nervioso. El equipo de Hoy Mismo fue súper atento y me explicó todo el proceso.</p>
+                        <div class="mt-4 font-bold">- Carlos M.</div>
+                    </div>
+                     <!-- Testimonial 3 -->
+                    <div class="bg-white p-6 rounded-lg shadow-md">
+                         <div class="flex items-center">
+                            <div class="text-yellow-400"><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i></div>
+                        </div>
+                        <p class="mt-4 text-gray-600">Excelente comunicación y precio justo. Recomiendo el transporte cerrado para autos clásicos, el mío llegó impecable. 100% recomendados.</p>
+                        <div class="mt-4 font-bold">- Roberto F.</div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- FAQ Section -->
+        <section id="faq" class="py-20 bg-white">
+            <div class="container mx-auto max-w-4xl px-4">
+                <h2 class="text-3xl md:text-4xl font-bold text-center font-poppins">Preguntas Frecuentes</h2>
+                <div class="mt-10 space-y-4">
+                    <!-- FAQ Item 1 -->
+                    <div class="faq-item bg-gray-50 rounded-lg">
+                        <button class="faq-item-question w-full flex justify-between items-center p-5 text-left font-semibold">
+                            <span>¿Cuánto tiempo tarda el transporte?</span>
+                            <i class="fas fa-chevron-down faq-icon transition-transform"></i>
+                        </button>
+                        <div class="faq-item-answer hidden p-5 pt-0 text-gray-600">
+                            El tiempo de tránsito varía según la distancia. Un envío de costa a costa suele tardar entre 7 y 10 días, mientras que rutas más cortas pueden tomar de 2 a 5 días. Tu asesor te dará un estimado preciso al momento de reservar.
+                        </div>
+                    </div>
+                     <!-- FAQ Item 2 -->
+                    <div class="faq-item bg-gray-50 rounded-lg">
+                        <button class="faq-item-question w-full flex justify-between items-center p-5 text-left font-semibold">
+                            <span>¿Mi vehículo está asegurado durante el transporte?</span>
+                            <i class="fas fa-chevron-down faq-icon transition-transform"></i>
+                        </button>
+                        <div class="faq-item-answer hidden p-5 pt-0 text-gray-600">
+                           ¡Absolutamente! Todos nuestros transportes cuentan con un seguro de carga de hasta $1,000,000. Tu vehículo está completamente cubierto contra daños durante todo el trayecto, sin ningún costo adicional para ti.
+                        </div>
+                    </div>
+                     <!-- FAQ Item 3 -->
+                    <div class="faq-item bg-gray-50 rounded-lg">
+                        <button class="faq-item-question w-full flex justify-between items-center p-5 text-left font-semibold">
+                            <span>¿Puedo dejar objetos personales en mi auto?</span>
+                            <i class="fas fa-chevron-down faq-icon transition-transform"></i>
+                        </button>
+                        <div class="faq-item-answer hidden p-5 pt-0 text-gray-600">
+                            Recomendamos no dejar objetos personales. Por ley y por motivos de seguro, el transportista no se hace responsable por artículos personales dentro del vehículo. Generalmente se permite una maleta o caja de hasta 100 lbs en el maletero.
+                        </div>
+                    </div>
+                     <!-- FAQ Item 4 -->
+                    <div class="faq-item bg-gray-50 rounded-lg">
+                        <button class="faq-item-question w-full flex justify-between items-center p-5 text-left font-semibold">
+                            <span>¿Necesito estar presente para la recogida y entrega?</span>
+                            <i class="fas fa-chevron-down faq-icon transition-transform"></i>
+                        </button>
+                        <div class="faq-item-answer hidden p-5 pt-0 text-gray-600">
+                            Sí, tú o una persona de tu confianza (mayor de 18 años) deben estar presentes para firmar el reporte de inspección (Bill of Lading) tanto en el origen como en el destino. Esto asegura que todos estén de acuerdo con el estado del vehículo.
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+    </main>
+    
+    <!-- Footer -->
+    <footer class="bg-hm-dark text-white">
+        <div class="container mx-auto max-w-7xl px-4 py-12">
+            <div class="grid md:grid-cols-4 gap-8">
+                <div>
+                    <h3 class="text-xl font-bold font-poppins text-hm-orange flex items-center gap-2">HOY MISMO</h3>
+                    <p class="mt-4 text-gray-400">Transporte de vehículos rápido, seguro y a tu alcance.</p>
+                </div>
+                <div>
+                    <h4 class="font-bold tracking-wider">ENLACES</h4>
+                    <ul class="mt-4 space-y-2">
+                        <li><a href="#services" class="text-gray-400 hover:text-white">Servicios</a></li>
+                        <li><a href="#how-it-works" class="text-gray-400 hover:text-white">Cómo Funciona</a></li>
+                        <li><a href="#faq" class="text-gray-400 hover:text-white">Preguntas</a></li>
+                    </ul>
+                </div>
+                <div>
+                    <h4 class="font-bold tracking-wider">CONTACTO</h4>
+                     <ul class="mt-4 space-y-2">
+                        <li class="flex items-center gap-2 text-gray-400"><i class="fas fa-phone"></i><a href="tel:+15206771945" class="hover:text-white">+1 (520) 677-1945</a></li>
+                        <li class="flex items-center gap-2 text-gray-400"><i class="fas fa-envelope"></i><a href="mailto:info@hoymismoautotransport.com" class="hover:text-white">info@hoymismoautotransport.com</a></li>
+                    </ul>
+                </div>
+                <div>
+                     <h4 class="font-bold tracking-wider">SÍGUENOS</h4>
+                     <div class="flex mt-4 space-x-4">
+                        <a href="#" class="text-gray-400 hover:text-white text-xl"><i class="fab fa-facebook"></i></a>
+                        <a href="#" class="text-gray-400 hover:text-white text-xl"><i class="fab fa-instagram"></i></a>
+                        <a href="#" class="text-gray-400 hover:text-white text-xl"><i class="fab fa-linkedin"></i></a>
+                     </div>
+                </div>
+            </div>
+            <div class="mt-8 border-t border-gray-800 pt-6 text-center text-sm text-gray-500">
+                &copy; <span id="year"></span> Hoy Mismo Auto Transport. Todos los derechos reservados.
+            </div>
+        </div>
+    </footer>
+
+    <script src="assets/js/main.js" defer></script>
+
+</body>
+</html>
